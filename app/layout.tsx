@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { inter } from "@/app/lib/fonts";
 import NavBar from "@/app/ui/navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 import Footer from "./ui/footer";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
