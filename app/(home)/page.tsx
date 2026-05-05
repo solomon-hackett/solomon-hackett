@@ -1,3 +1,9 @@
+import Hero from '@/app/ui/home/hero';
+
 export default function Page() {
-  return <main></main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }

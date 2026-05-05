@@ -1,24 +1,37 @@
-import Link from "next/link";
+"use client";
+
+import clsx from 'clsx';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { spaceGrotesk } from '@/app/lib/fonts';
 
 const links = [
-  { name: "Home", href: "/" },
   { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
   { name: "Contact Me", href: "/contact" },
 ];
 
 export default function NavBar() {
+  const pathname = usePathname();
   return (
-    <nav className="flex justify-center items-center gap-4 bg-surface shadow-lg hover:shadow-xl mt-2 mr-1 ml-1 px-8 py-4 rounded-xl w-fit transition duration-200">
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className="text-secondary hover:text-accent text-2xl transition-colors"
-        >
-          {link.name}
-        </Link>
-      ))}
+    <nav className="nav">
+      <Link href="/" className={`name ${spaceGrotesk.className}`}>
+        Solomon Hackett
+      </Link>
+      <div className="link-container">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={clsx("nav-link", {
+              active: pathname === link.href,
+            })}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }

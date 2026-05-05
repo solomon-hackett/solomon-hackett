@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import './globals.css';
 
-import { inter } from "@/app/lib/fonts";
-import NavBar from "@/app/ui/navbar";
-import { Analytics } from "@vercel/analytics/next";
+import { inter } from '@/app/lib/fonts';
+import NavBar from '@/app/ui/navbar';
+import { Analytics } from '@vercel/analytics/next';
 
-import Footer from "./ui/footer";
+import Footer from './ui/footer';
 
 export const metadata: Metadata = {
   title: {
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full ${inter.className}`}>
-      <body className="flex flex-col items-center bg-background dark:bg-dark-background min-h-full">
+    <html lang="en" className={`${inter.className}`}>
+      <body>
         <NavBar />
         {children}
         <Footer />
