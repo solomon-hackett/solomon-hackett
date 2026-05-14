@@ -235,6 +235,8 @@ small {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 800px;
+  width: auto;
 
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -563,4 +565,108 @@ textarea:focus {
 
 .toggle-button--primary:hover {
   filter: brightness(1.1);
+}
+/* -------------------------------
+   INLINE LINKS
+---------------------------------- */
+.about-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 150ms ease;
+}
+
+.about-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+/* -------------------------------
+   GITHUB CARD
+---------------------------------- */
+.github-card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.github-card__header {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.github-card__stats {
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.github-card__stat {
+  align-items: center;
+  gap: 2px;
+}
+
+.github-card__stat-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.github-card__divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+}
+
+.github-card__repo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 150ms ease;
+}
+
+.github-card__repo:hover {
+  border-color: var(--accent-primary);
+}
+
+.github-card__repo-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-primary);
+}
+
+.github-card__repo-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* -------------------------------
+   SKILLS PAGE
+---------------------------------- */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.skills__card {
+  gap: 12px;
+  width: auto;
+}
+
+.skills__heading {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
 }

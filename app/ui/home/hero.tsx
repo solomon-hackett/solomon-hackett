@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { spaceGrotesk } from '@/app/lib/fonts';
-import Stats from '@/app/ui/home/stats';
+import { spaceGrotesk } from "@/app/lib/fonts";
+import Stats from "@/app/ui/home/stats";
 
 export default function Hero() {
   return (
@@ -25,8 +25,8 @@ export default function Hero() {
           <Image
             src="/images/home-hero.jpg"
             alt="Hero image of Solomon Hackett"
-            width={800}
-            height={800}
+            width={812}
+            height={1106}
           />
         </div>
       </div>
