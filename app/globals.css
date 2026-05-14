@@ -134,6 +134,8 @@ small {
   margin: 0.5rem 1% auto;
   position: sticky;
   align-self: center;
+  top: 0.5rem;
+  z-index: 100;
 }
 .nav:hover {
   box-shadow:
@@ -289,6 +291,7 @@ small {
 .tag {
   display: inline-flex;
   align-items: center;
+  width: max-content;
   font-size: 12px;
   font-family: var(--font-mono);
   padding: 4px 8px;
